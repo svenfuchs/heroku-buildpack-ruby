@@ -12,6 +12,8 @@ end
 
 module LanguagePack
   module ShellHelpers
+    extend self
+    
     @@user_env_hash = {}
 
     def self.user_env_hash

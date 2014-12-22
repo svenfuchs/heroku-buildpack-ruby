@@ -3,7 +3,7 @@ require "language_pack/base"
 
 class LanguagePack::NoLockfile < LanguagePack::Base
   def self.use?
-    !File.exists?("Gemfile.lock")
+    !File.exists?("#{LanguagePack::ShellHelpers.env('BUNDLE_GEMFILE') || 'Gemfile'}.lock")
   end
 
   def name
