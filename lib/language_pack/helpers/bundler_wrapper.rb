@@ -26,7 +26,6 @@ class LanguagePack::Helpers::BundlerWrapper
     @orig_bundle_gemfile  = ENV['BUNDLE_GEMFILE']
     ENV['BUNDLE_GEMFILE'] = @gemfile_path.to_s
     @path                 = Pathname.new "#{@bundler_path}/gems/#{BUNDLER_DIR_NAME}/lib"
-    puts `echo $BUNDLE_GEMFILE`
   end
 
   def install
